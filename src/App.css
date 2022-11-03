@@ -1,38 +1,101 @@
-.App {
+.app {
+  width: 90vw;
+  margin: auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-app {
+  height: 100%;
+  padding: 20px 10px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 25%), -4px -4px 8px rgba(0, 0, 0, 25%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-app textarea {
+  width: 90%;
+  border-radius: 10px;
+  height: 100px;
+  padding: 10px;
+  background-color: rgba(209, 208, 206, 0.499);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-app button {
+  margin-top: 20px;
+  width: 75px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: orange;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid grey;
+}
+.main-app button:hover {
+  color: orange;
+  background-color: white;
+}
+.list {
+  margin-top: 20px;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 25%), -4px -4px 8px rgba(0, 0, 0, 25%);
+  flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.item {
+  width: 75vw;
+  height: 50px;
+  background: rgba(128, 128, 128, 0.289);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.item div {
+  display: flex;
+  padding: 10px;
+}
+.done {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.3);
+}
+.item button {
+  margin-left: 10px;
+  outline: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 10px;
+  width: 60px;
+  border: 2px solid#fff;
+}
+.edit {
+  background: blue;
+}
+.delete {
+  background: red;
+}
+.save {
+  background-color: green;
+}
+.checkedEdit {
+  background: rgb(168, 168, 227);
+}
+@media screen and (max-width: 550px) {
+  .item {
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .item div {
+    justify-content: flex-start;
+  }
+  .item div:last-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
